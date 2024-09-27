@@ -1,0 +1,17 @@
+{
+  "name": "rebuffed",
+  "version": "0.1.0",
+  "description": "Remind yourself to reapply buffs",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "vite": "^5.4.8"
+  }
+}

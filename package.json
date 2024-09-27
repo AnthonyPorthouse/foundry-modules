@@ -1,0 +1,28 @@
+{
+  "name": "foundry-modules",
+  "license": "ISC",
+  "author": {
+    "name": "Anthony Porthouse",
+    "email": "anthony@porthou.se"
+  },
+  "main": "index.js",
+  "workspaces": [
+    "modules/rebuffed"
+  ],
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@league-of-foundry-developers/foundry-vtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#v12/main",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "sort-package-json": "^2.10.1",
+    "typescript": "^5.6.2"
+  }
+}
