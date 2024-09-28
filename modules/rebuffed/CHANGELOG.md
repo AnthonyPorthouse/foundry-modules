@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.1...rebuffed-v1.0.2) (2024-09-28)
+
+
+### Bug Fixes
+
+* **rebuffed:** add author info ([eeadc06](https://github.com/AnthonyPorthouse/foundry-modules/commit/eeadc067c09a9ab11ca70cbc8a57fdec3f1398d3))
+
 ## [1.0.1](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.0...rebuffed-v1.0.1) (2024-09-28)
 
 
