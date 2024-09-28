@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.4...rebuffed-v1.0.5) (2024-09-28)
+
+
+### Bug Fixes
+
+* **rebuffed:** update module manifest ([657312f](https://github.com/AnthonyPorthouse/foundry-modules/commit/657312f7365d85e3414d080b82ba283a1aafb14c))
+
 ## [1.0.4](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.3...rebuffed-v1.0.4) (2024-09-28)
 
 
