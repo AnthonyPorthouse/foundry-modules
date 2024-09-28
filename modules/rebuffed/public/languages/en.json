@@ -1,4 +1,7 @@
 {
   "REBUFFED.enabled": "Enable Rebuffed",
-  "REBUFFED.enabledHint": "Enable Rebuffed for your current session"
+  "REBUFFED.enabledHint": "Enable Rebuffed for your current session",
+
+  "REBUFFED.config": "Configure Rebuffed",
+  "REBUFFED.configHint": "Setup rules for reminders"
 }

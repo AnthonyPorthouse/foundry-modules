@@ -38,11 +38,12 @@ jobs:
           cd modules/rebuffed
           npm run build
           cd dist
-          zip -r rebuffed-${{ steps.release.outputs['modules/rebuffed--tag_name'] }}.zip .
+          zip -r ${{ steps.release.outputs['modules/rebuffed--tag_name'] }}.zip .
 
       - name: Upload Rebuffed Package
         if: ${{ steps.release.outputs['modules/rebuffed--release_created'] }}
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.release.outputs['modules/rebuffed--tag_name'] }}
           files: |
-            modules/rebuffed/dist/rebuffed-${{ steps.release.outputs['modules/rebuffed--tag_name'] }}.zip
+            modules/rebuffed/dist/${{ steps.release.outputs['modules/rebuffed--tag_name'] }}.zip
