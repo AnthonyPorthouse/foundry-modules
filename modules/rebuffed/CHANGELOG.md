@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.3...rebuffed-v1.0.4) (2024-09-28)
+
+
+### Bug Fixes
+
+* **rebuffed:** add i18n for more menus ([c409cb9](https://github.com/AnthonyPorthouse/foundry-modules/commit/c409cb9f56ee7b65eabbb0af03f3114403dfc50b))
+
 ## [1.0.3](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.2...rebuffed-v1.0.3) (2024-09-28)
 
 
