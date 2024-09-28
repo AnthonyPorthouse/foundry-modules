@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.0...rebuffed-v1.0.1) (2024-09-28)
+
+
+### Bug Fixes
+
+* apply prettier ([6bef556](https://github.com/AnthonyPorthouse/foundry-modules/commit/6bef556a9237ceb78be87f67efcad41ab7a06c9a))
+
 ## 1.0.0 (2024-09-28)
 
 

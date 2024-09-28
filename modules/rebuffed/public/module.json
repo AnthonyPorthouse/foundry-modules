@@ -12,7 +12,9 @@
     "minimum": "12",
     "verified": "12"
   },
-  "esmodules": ["rebuffed.js"],
+  "esmodules": [
+    "rebuffed.js"
+  ],
   "id": "rebuffed",
   "languages": [
     {
@@ -31,6 +33,6 @@
     ]
   },
   "title": "Rebuffed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest": "https://raw.githubusercontent.com/AnthonyPorthouse/foundry-modules/refs/heads/main/modules/rebuffed/public/module.json"
 }
