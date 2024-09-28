@@ -12,9 +12,7 @@
     "minimum": "12",
     "verified": "12"
   },
-  "esmodules": [
-    "rebuffed.js"
-  ],
+  "esmodules": ["rebuffed.js"],
   "id": "rebuffed",
   "languages": [
     {
