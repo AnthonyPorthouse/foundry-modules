@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.6](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.5...rebuffed-v1.0.6) (2024-09-28)
+
+
+### Bug Fixes
+
+* **rebuffed:** correct download url ([af452c4](https://github.com/AnthonyPorthouse/foundry-modules/commit/af452c4f662b484083fca6b253ef0cf7d5444152))
+* **rebuffed:** generate zip without version ([7bdc8f0](https://github.com/AnthonyPorthouse/foundry-modules/commit/7bdc8f0267ed25e38343abac2f9141bd7924c13d))
+
 ## [1.0.5](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.4...rebuffed-v1.0.5) (2024-09-28)
 
 
