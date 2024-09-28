@@ -33,6 +33,6 @@
     ]
   },
   "title": "Rebuffed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest": "https://raw.githubusercontent.com/AnthonyPorthouse/foundry-modules/refs/heads/main/modules/rebuffed/public/module.json"
 }
