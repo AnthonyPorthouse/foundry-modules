@@ -1,3 +1,5 @@
+import { RebuffedConfig } from "./RebuffedConfig";
+
 export function initConfig() {
   game.settings.register("rebuffed", "rebuffed-enabled", {
     name: "REBUFFED.enabled",
