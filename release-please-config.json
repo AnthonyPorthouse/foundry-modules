@@ -9,6 +9,11 @@
           "type": "json",
           "path": "public/module.json",
           "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "public/module.json",
+          "jsonpath": "$.download"
         }
       ]
     }

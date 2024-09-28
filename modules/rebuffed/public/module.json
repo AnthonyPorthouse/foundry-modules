@@ -12,9 +12,7 @@
     "minimum": "12",
     "verified": "12"
   },
-  "esmodules": [
-    "rebuffed.js"
-  ],
+  "esmodules": ["rebuffed.js"],
   "id": "rebuffed",
   "languages": [
     {
@@ -34,5 +32,10 @@
   },
   "title": "Rebuffed",
   "version": "1.0.4",
-  "manifest": "https://raw.githubusercontent.com/AnthonyPorthouse/foundry-modules/refs/heads/main/modules/rebuffed/public/module.json"
+  "manifest": "https://raw.githubusercontent.com/AnthonyPorthouse/foundry-modules/refs/heads/main/modules/rebuffed/public/module.json",
+  "download": "https://github.com/AnthonyPorthouse/foundry-modules/releases/download/rebuffed-v1.0.4/rebuffed-v1.0.4.zip",
+  "readme": "https://github.com/AnthonyPorthouse/foundry-modules/blob/main/modules/rebuffed/README.md",
+  "changelog": "https://github.com/AnthonyPorthouse/foundry-modules/blob/main/modules/rebuffed/CHANGELOG.md",
+  "license": "https://github.com/AnthonyPorthouse/foundry-modules/blob/main/LICENSE.md",
+  "url": "https://github.com/AnthonyPorthouse/foundry-modules/tree/main/modules/rebuffed"
 }
