@@ -1,6 +1,7 @@
 {
   "name": "foundry-modules",
   "license": "ISC",
+  "type": "module",
   "author": {
     "name": "Anthony Porthouse",
     "email": "anthony@porthou.se"
