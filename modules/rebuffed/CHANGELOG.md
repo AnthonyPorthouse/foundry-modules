@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.2...rebuffed-v1.0.3) (2024-09-28)
+
+
+### Bug Fixes
+
+* **rebuffed:** include additional dep to build in gha ([fa2eda4](https://github.com/AnthonyPorthouse/foundry-modules/commit/fa2eda4e72cb4ee7ac1f67ad93ac641ba4cea955))
+
 ## [1.0.2](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.1...rebuffed-v1.0.2) (2024-09-28)
 
 
