@@ -1,12 +1,11 @@
 {
-  "version": "0.1.0",
   "authors": [
     {
-      "name": "Anthony Porthouse",
-      "email": "anthony@porthou.se",
-      "url": "https://github.com/anthonyporthouse",
       "discord": "port3m5",
-      "flags": {}
+      "email": "anthony@porthou.se",
+      "flags": {},
+      "name": "Anthony Porthouse",
+      "url": "https://github.com/anthonyporthouse"
     }
   ],
   "compatibility": {
@@ -25,11 +24,13 @@
   "relationships": {
     "systems": [
       {
+        "compatibility": {},
         "id": "pf2e",
-        "type": "system",
-        "compatibility": {}
+        "type": "system"
       }
     ]
   },
-  "title": "Rebuffed"
+  "title": "Rebuffed",
+  "version": "0.1.0",
+  "manifest": "https://raw.githubusercontent.com/AnthonyPorthouse/foundry-modules/refs/heads/main/modules/rebuffed/public/module.json"
 }

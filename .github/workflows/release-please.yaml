@@ -1,0 +1,47 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+  packages: write
+
+jobs:
+  release-please:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release Please
+        id: release
+        uses: googleapis/release-please-action@v4
+        with:
+          config-file: release-please-config.json
+
+      - name: Checkout Code
+        if: ${{ steps.release.outputs.releases_created }}
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        if: ${{ steps.release.outputs.releases_created }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Create Rebuffed Package
+        if: ${{ steps.release.outputs['modules/rebuffed--release_created'] }}
+        run: cd modules/rebuffed
+          npm i
+          npm run build
+          cd dist
+          zip -r rebuffed-${{ steps.release.outputs['modules/rebuffed--tag_name'] }}.zip .
+
+      - name: Upload Rebuffed Package
+        if: ${{ steps.release.outputs['modules/rebuffed--release_created'] }}
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            modules/rebuffed/dist/rebuffed-${{ steps.release.outputs['modules/rebuffed--tag_name'] }}.zip
