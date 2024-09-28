@@ -17,7 +17,8 @@ jobs:
     steps:
       - name: Release Please
         id: release
-        uses: googleapis/release-please-action@v4
+        # Using main as release please is often bumped more frequently than the action
+        uses: googleapis/release-please-action@main
         with:
           config-file: release-please-config.json
 
