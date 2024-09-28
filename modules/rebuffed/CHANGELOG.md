@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.6...rebuffed-v1.0.7) (2024-09-28)
+
+
+### Bug Fixes
+
+* **rebuffed:** correctly import RebuffedConfig ([1694ac1](https://github.com/AnthonyPorthouse/foundry-modules/commit/1694ac18718391b86cdb686b1ecea313b70cea89))
+
 ## [1.0.6](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.5...rebuffed-v1.0.6) (2024-09-28)
 
 
