@@ -3,7 +3,10 @@
   "version": "1.0.1",
   "description": "Remind yourself to reapply buffs",
   "license": "ISC",
-  "author": "",
+  "author": {
+    "name": "Anthony Porthouse",
+    "email": "anthony@porthou.se"
+  },
   "type": "module",
   "main": "index.js",
   "scripts": {
