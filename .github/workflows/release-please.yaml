@@ -33,7 +33,8 @@ jobs:
 
       - name: Create Rebuffed Package
         if: ${{ steps.release.outputs['modules/rebuffed--release_created'] }}
-        run: cd modules/rebuffed
+        run: |
+          cd modules/rebuffed
           npm i
           npm run build
           cd dist
