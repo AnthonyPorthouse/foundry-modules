@@ -39,7 +39,7 @@ jobs:
           cd modules/rebuffed
           npm run build
           cd dist
-          zip -r ${{ steps.release.outputs['modules/rebuffed--tag_name'] }}.zip .
+          zip -r rebuffed.zip .
 
       - name: Upload Rebuffed Package
         if: ${{ steps.release.outputs['modules/rebuffed--release_created'] }}
@@ -47,4 +47,4 @@ jobs:
         with:
           tag_name: ${{ steps.release.outputs['modules/rebuffed--tag_name'] }}
           files: |
-            modules/rebuffed/dist/${{ steps.release.outputs['modules/rebuffed--tag_name'] }}.zip
+            modules/rebuffed/dist/rebuffed.zip
