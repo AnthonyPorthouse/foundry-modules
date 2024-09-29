@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.7...rebuffed-v1.0.8) (2024-09-29)
+
+
+### Bug Fixes
+
+* **rebuffed:** implement spell reminder toggle ([57c0109](https://github.com/AnthonyPorthouse/foundry-modules/commit/57c0109686cb76c13adaee4917cecd33e8cee830))
+
 ## [1.0.7](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.6...rebuffed-v1.0.7) (2024-09-28)
 
 
