@@ -44,7 +44,7 @@ const onCombatUpdate = async (combat) => {
 
   for (const collection of actor.spellcasting.collections) {
     for (const spell of collection.entry.spells) {
-      if (wantedSpells.includes(spell.name)) {
+      if (spell.getFlag("rebuffed", "hasReminder")) {
         log("Found wanted spell", spell.name);
         ui.notifications.info(
           await TextEditor.enrichHTML(
@@ -57,3 +57,32 @@ const onCombatUpdate = async (combat) => {
 };
 
 Hooks.on("combatTurnChange", onCombatUpdate);
+
+Hooks.on("getItemSheetHeaderButtons", async (application, buttons) => {
+  log(application);
+
+  let button = {
+    class: "remind",
+    icon: "fas fa-star",
+    label: "Remind",
+    onclick: () => {
+      application.object.setFlag("rebuffed", "hasReminder", true);
+    },
+  };
+
+  if (application.object.getFlag("rebuffed", "hasReminder")) {
+    log(
+      `Reminder for ${application.object.name} already set. Adding Remove button.`,
+    );
+    button = {
+      class: "remind",
+      icon: "fas fa-star",
+      label: "Remove Reminder",
+      onclick: () => {
+        application.object.unsetFlag("rebuffed", "hasReminder");
+      },
+    };
+  }
+
+  buttons.unshift(button);
+});
