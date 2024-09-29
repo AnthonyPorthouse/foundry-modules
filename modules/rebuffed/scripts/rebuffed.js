@@ -58,7 +58,7 @@ const onCombatUpdate = async (combat) => {
 
 Hooks.on("combatTurnChange", onCombatUpdate);
 
-Hooks.on("getItemSheetHeaderButtons", async (application, buttons) => {
+Hooks.on("getSpellSheetPF2eHeaderButtons", async (application, buttons) => {
   log(application);
 
   let button = {
