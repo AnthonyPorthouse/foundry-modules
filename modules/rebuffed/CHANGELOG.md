@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.9](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.8...rebuffed-v1.0.9) (2024-09-30)
+
+
+### Bug Fixes
+
+* **rebuffed:** only show reminder button for spells ([e253829](https://github.com/AnthonyPorthouse/foundry-modules/commit/e253829dbe435e38841cecfd6696c3fdaf4e5a58))
+* **rebuffed:** toggle menu description on click ([b68a0f7](https://github.com/AnthonyPorthouse/foundry-modules/commit/b68a0f705d0cc93e8135a00dc34ce3ee58ab6fde))
+
 ## [1.0.8](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.7...rebuffed-v1.0.8) (2024-09-29)
 
 
