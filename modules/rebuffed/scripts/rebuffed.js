@@ -1,6 +1,6 @@
 import { version } from "../package.json";
 import { initConfig } from "./initConfig";
-import { log } from "./utils";
+import { log, updateTextNode } from "./utils";
 
 Hooks.once("init", async () => {
   log(`Launching Rebuffed v${version}`);
@@ -59,30 +59,26 @@ const onCombatUpdate = async (combat) => {
 Hooks.on("combatTurnChange", onCombatUpdate);
 
 Hooks.on("getSpellSheetPF2eHeaderButtons", async (application, buttons) => {
-  log(application);
+  const { object } = application;
 
   let button = {
-    class: "remind",
+    class: `remind-${object.id}`,
     icon: "fas fa-star",
-    label: "Remind",
+    label: object.getFlag("rebuffed", "hasReminder")
+      ? "Remove Reminder"
+      : "Remind",
     onclick: () => {
-      application.object.setFlag("rebuffed", "hasReminder", true);
+      if (object.getFlag("rebuffed", "hasReminder")) {
+        updateTextNode(`.remind-${object.id}`, "Remind");
+
+        object.unsetFlag("rebuffed", "hasReminder");
+      } else {
+        updateTextNode(`.remind-${object.id}`, "Remove Reminder");
+
+        object.setFlag("rebuffed", "hasReminder", true);
+      }
     },
   };
-
-  if (application.object.getFlag("rebuffed", "hasReminder")) {
-    log(
-      `Reminder for ${application.object.name} already set. Adding Remove button.`,
-    );
-    button = {
-      class: "remind",
-      icon: "fas fa-star",
-      label: "Remove Reminder",
-      onclick: () => {
-        application.object.unsetFlag("rebuffed", "hasReminder");
-      },
-    };
-  }
 
   buttons.unshift(button);
 });
