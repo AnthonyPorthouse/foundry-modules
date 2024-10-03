@@ -22,7 +22,6 @@
     },
 
     "modules/pf2e-drag-ruler-port": {
-      "release-as": "0.1.0",
       "extra-files": [
         {
           "type": "json",

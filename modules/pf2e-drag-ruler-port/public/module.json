@@ -43,7 +43,7 @@
       "flags": {}
     }
   ],
-  "esmodules": ["src/main.js"],
+  "esmodules": ["pf2e-drag-ruler-port.js"],
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/AnthonyPorthouse/foundry-modules/refs/heads/main/modules/pf2e-drag-ruler-port/public/module.json",
   "download": "https://github.com/AnthonyPorthouse/foundry-modules/releases/download/pf2e-drag-ruler-port-v0.1.0/pf2e-drag-ruler-port.zip",
