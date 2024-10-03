@@ -8,7 +8,8 @@
   },
   "main": "index.js",
   "workspaces": [
-    "modules/rebuffed"
+    "modules/rebuffed",
+    "modules/pf2e-drag-ruler-port"
   ],
   "scripts": {
     "prepare": "husky"
