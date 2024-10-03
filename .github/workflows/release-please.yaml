@@ -48,3 +48,20 @@ jobs:
           tag_name: ${{ steps.release.outputs['modules/rebuffed--tag_name'] }}
           files: |
             modules/rebuffed/dist/rebuffed.zip
+
+      - name: Create PF2e Drag Ruler Port Package
+        if: ${{ steps.release.outputs['modules/pf2e-drag-ruler-port--release_created'] }}
+        run: |
+          npm i
+          cd modules/pf2e-drag-ruler-port
+          npm run build
+          cd dist
+          zip -r pf2e-drag-ruler-port.zip .
+
+      - name: Upload PF2e Drag Ruler Package
+        if: ${{ steps.release.outputs['modules/pf2e-drag-ruler-port--release_created'] }}
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.release.outputs['modules/pf2e-drag-ruler-port--tag_name'] }}
+          files: |
+            modules/pf2e-drag-ruler-port/dist/pf2e-drag-ruler-port.zip

@@ -16,6 +16,22 @@
           "jsonpath": "$.download"
         }
       ]
+    },
+
+    "modules/pf2e-drag-ruler-port": {
+      "bump-minor-pre-major": true,
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "public/module.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "public/module.json",
+          "jsonpath": "$.download"
+        }
+      ]
     }
   }
 }
