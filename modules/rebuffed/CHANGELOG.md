@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.9...rebuffed-v1.1.0) (2024-11-11)
+
+
+### Features
+
+* set reminders on a per-user basis ([1b70493](https://github.com/AnthonyPorthouse/foundry-modules/commit/1b70493c841b91467f86f6598b1e5dba1484ee93))
+
 ## [1.0.9](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.8...rebuffed-v1.0.9) (2024-09-30)
 
 
