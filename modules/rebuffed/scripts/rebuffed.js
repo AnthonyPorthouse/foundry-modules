@@ -4,6 +4,7 @@ import { log, updateTextNode } from "./utils";
 
 Hooks.once("init", async () => {
   log(`Launching Rebuffed v${version}`);
+  log("Test version");
 
   initConfig();
 });
@@ -12,7 +13,8 @@ Hooks.once("ready", async () => {
   log("Launched Rebuffed");
 });
 
-const wantedSpells = Object.freeze(["Shield", "Courageous Anthem"]);
+const hasReminderSet = (object, userId) =>
+  object.getFlag("rebuffed", "hasReminder")[userId] === true;
 
 const onCombatUpdate = async (combat) => {
   if (!game.settings.get("rebuffed", "rebuffed-enabled")) {
@@ -44,7 +46,7 @@ const onCombatUpdate = async (combat) => {
 
   for (const collection of actor.spellcasting.collections) {
     for (const spell of collection.entry.spells) {
-      if (spell.getFlag("rebuffed", "hasReminder")) {
+      if (hasReminderSet(spell, currentUser.id)) {
         log("Found wanted spell", spell.name);
         ui.notifications.info(
           await TextEditor.enrichHTML(
@@ -61,21 +63,23 @@ Hooks.on("combatTurnChange", onCombatUpdate);
 Hooks.on("getSpellSheetPF2eHeaderButtons", async (application, buttons) => {
   const { object } = application;
 
+  const currentUser = game.user.id;
+
   let button = {
     class: `remind-${object.id}`,
     icon: "fas fa-star",
-    label: object.getFlag("rebuffed", "hasReminder")
-      ? "Remove Reminder"
-      : "Remind",
+    label: hasReminderSet(object, currentUser) ? "Remove Reminder" : "Remind",
     onclick: () => {
-      if (object.getFlag("rebuffed", "hasReminder")) {
+      if (hasReminderSet(object, currentUser)) {
         updateTextNode(`.remind-${object.id}`, "Remind");
 
-        object.unsetFlag("rebuffed", "hasReminder");
+        object.setFlag("rebuffed", "hasReminder", {
+          [`-=${currentUser}`]: null,
+        });
       } else {
         updateTextNode(`.remind-${object.id}`, "Remove Reminder");
 
-        object.setFlag("rebuffed", "hasReminder", true);
+        object.setFlag("rebuffed", "hasReminder", { [currentUser]: true });
       }
     },
   };
