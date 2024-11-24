@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.1.0...rebuffed-v1.1.1) (2024-11-24)
+
+
+### Bug Fixes
+
+* fetch using dot notation ([fc2478f](https://github.com/AnthonyPorthouse/foundry-modules/commit/fc2478fdd93c721fc0961eed582973ea2b37bb3c))
+
 ## [1.1.0](https://github.com/AnthonyPorthouse/foundry-modules/compare/rebuffed-v1.0.9...rebuffed-v1.1.0) (2024-11-11)
 
 
