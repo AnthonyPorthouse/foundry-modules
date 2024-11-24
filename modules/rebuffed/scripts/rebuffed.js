@@ -4,7 +4,10 @@ import { log, updateTextNode } from "./utils";
 
 Hooks.once("init", async () => {
   log(`Launching Rebuffed v${version}`);
-  log("Test version");
+
+  if (import.meta.env.DEV) {
+    log(`${import.meta.env.MODE} version`);
+  }
 
   initConfig();
 });
@@ -13,8 +16,11 @@ Hooks.once("ready", async () => {
   log("Launched Rebuffed");
 });
 
-const hasReminderSet = (object, userId) =>
-  object.getFlag("rebuffed", "hasReminder")[userId] === true;
+const hasReminderSet = (object, userId) => {
+  const flag = object.getFlag("rebuffed", `hasReminder.${userId}`);
+
+  return flag === true;
+};
 
 const onCombatUpdate = async (combat) => {
   if (!game.settings.get("rebuffed", "rebuffed-enabled")) {
